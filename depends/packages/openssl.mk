@@ -7,7 +7,6 @@ $(package)_sha256_hash=529043b15cffa5f36077a4d0af83f3de399807181d607441d734196d8
 define $(package)_set_vars
 $(package)_config_env=AR="$($(package)_ar)" RANLIB="$($(package)_ranlib)" CC="$($(package)_cc)"
 $(package)_config_opts=--prefix=$(host_prefix) --openssldir=$(host_prefix)/etc/openssl
-$(package)_config_opts+=-DDATE=\"$(shell date)\"
 $(package)_config_opts+=no-camellia
 $(package)_config_opts+=no-capieng
 $(package)_config_opts+=no-cast
