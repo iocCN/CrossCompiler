@@ -18,7 +18,8 @@ export STRIP=${target_host/v7a}-strip
 export LDFLAGS="-pie -static-libstdc++"
 export IOC_LIB_PATH=/ioc_src/depends/${target_host}/lib/
 export IOC_INCLUDE_PATH=/ioc_src/depends/${target_host}/include/
-export BOOST_LIB_SUFFIX=-mt
+# Modern Boost versions don't use -mt suffix
+export BOOST_LIB_SUFFIX=
 export BDB_LIB_SUFFIX=
 
 num_jobs=4
